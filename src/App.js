@@ -3,6 +3,7 @@ import { Grid } from '@material-ui/core';
 import './App.css';
 import youtube from './api/youtube'
 import {SearchBar, VideoDetail,VideoList  } from './components/index'
+import key from './components/key'
 class  App  extends React.Component {
 state={
   videos:[],
@@ -17,7 +18,7 @@ state={
       q : searchTerm,
       part : 'snippet',
       maxResults : 5,
-      key:'PUT YOUR KEY HERE'
+      key:key
   }
   })
   console.log(response.data.items);
